@@ -46,11 +46,11 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init
+        run: cd infra && terraform init
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color
+        run: cd infra && terraform plan -no-color
         continue-on-error: true
 
       - name: Terraform Plan Status
@@ -59,4 +59,4 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -var="prefix=$PREFIX" -var="image=$IMAGE"  -auto-approve
+        run: cd infra && terraform apply -auto-approve
