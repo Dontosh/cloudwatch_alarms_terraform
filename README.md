@@ -1,3 +1,5 @@
+[![Terraform](https://github.com/Dontosh/cloudwatch_alarms_terraform/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/Dontosh/cloudwatch_alarms_terraform/actions/workflows/pipeline.yaml)
+
 # Metrics og Alarmer med Spring Boot og CloudWatch + Terraform
 
 I denne øvingen skal dere bli ennå bedre kjent med hvordan man instrumenterer en Spring Boot applikasjon med Metrics. 
